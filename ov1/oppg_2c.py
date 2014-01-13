@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 Tmin = 0
-Tmax = 30*60
+Tmax = 120*60
 Tone = 120
 Vzero = 30.0
 
@@ -15,6 +15,12 @@ f = lambda t: ((Vzero*(Tone**2))/(t**2))
 
 for n in range(Tone, Tmax): y[n+1] = f(n)
 
-Tn = lambda b, a, n, l: ((b-a)/(n*2))*(y[b]+y[a])
-
-# ...
+fig = plt.figure()
+plt.axis([Tmin, Tmax, -10, 10000])
+plt.xlabel('Tid (s)')
+plt.ylabel('Strekning (m)')
+plt.title('Togets tilbakelagte strekning.\n' + str(int(round(np.sum(y)))) + 'm ved ' + str(Tmax) + 's.')
+plt.grid(True)
+plt.plot(x, np.cumsum(y))
+plt.show()
+fig.savefig('oppg_2c.png')
