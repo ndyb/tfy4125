@@ -1,1 +1,4 @@
-tfy4125 øvinger
+tfy4125 fysikk
+
+- øvinger
+- lab
