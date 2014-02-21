@@ -1,0 +1,43 @@
+% This file was created by matplotlib v0.1.0.
+% Copyright (c) 2010--2014, Nico Schlömer <nico.schloemer@gmail.com>
+% All rights reserved.
+% 
+% The lastest updates can be retrieved from
+% 
+% https://github.com/nschloe/matplotlib2tikz
+% 
+% where you can also submit bug reports and leavecomments.
+% 
+
+\begin{tikzpicture}
+
+\begin{axis}[
+title={Terminalhastighet for forskjellige antall muffinsformer},
+xlabel={Masse [$g$]},
+ylabel={Terminal hastighet [$m / s$]},
+xmin=0, xmax=2,
+ymin=0, ymax=4,
+axis on top,
+width=\figurewidth,
+height=\figureheight,
+xmajorgrids,
+ymajorgrids
+]
+\addplot [blue, mark=*, mark size=3, mark options={draw=black}]
+coordinates {
+(0.481,1.50619948524)
+(0.967,2.24261595684)
+(1.96,3.52894780715029)
+
+};
+\path [draw=black, fill opacity=0] (axis cs:13,1)--(axis cs:13,1);
+
+\path [draw=black, fill opacity=0] (axis cs:13,0)--(axis cs:13,0);
+
+\path [draw=black, fill opacity=0] (axis cs:1,13)--(axis cs:1,13);
+
+\path [draw=black, fill opacity=0] (axis cs:0,13)--(axis cs:0,13);
+
+\end{axis}
+
+\end{tikzpicture}
